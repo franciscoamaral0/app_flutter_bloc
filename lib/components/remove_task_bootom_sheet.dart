@@ -12,7 +12,9 @@ class RemoveTask extends StatelessWidget {
   const RemoveTask({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return Padding(
       padding: _removeTaskPadding,
       child: Column(
@@ -26,11 +28,13 @@ class RemoveTask extends StatelessWidget {
           const SizedBox(height: 42),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             SquareButton(
+              onClickFunction: () {},
               icone: Icons.done_all_rounded,
               cor: TaskColors.buttonConfirmBackgroundColor,
             ),
             const SizedBox(width: 10),
             SquareButton(
+                onClickFunction: Navigator.of(context).pop,
                 icone: Icons.cancel_presentation_rounded,
                 cor: TaskColors.redColor),
             const SizedBox(height: 10)
